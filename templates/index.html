@@ -1,5 +1,8 @@
-<ul>
-    {% for surah in surahs %}
-        <li>{{ surah.name }} ({{ surah.number }})</li>
-    {% endfor %}
-</ul>
+{% for surah in surahs %}
+    <h2>{{ surah.englishName }} ({{ surah.name }})</h2>
+    <ul>
+        {% for ayah in surah.ayahs %}
+            <li>{{ ayah.text }}</li>
+        {% endfor %}
+    </ul>
+{% endfor %}
